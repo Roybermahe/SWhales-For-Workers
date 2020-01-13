@@ -1,0 +1,13 @@
+<StackLayout>
+    <img class="ImageGroup"  src="~/images/bg-inicio.png"/> 
+</StackLayout> 
+
+<StackLayout height = "90%" stretchLastChild="true" orientation="horizontal"> 
+    <GridLayout verticalAlignment="bottom" columns = "*, auto" rows = "50, auto">
+        <Label class="message" row ="0" colSpan="2" text="Elije una de estas opciones para registrarte" textWrap = "true"></Label>
+        <Button class ="Google" width = "42%" col = "0" row="1" [text] = "'Sign with\nGoogle'" textWrap = "true">
+        </Button> 
+        <Button class ="Facebook" width = "42%" col = "1" row="1" [text] = "'Sign with\nFacebook'" textWrap = "true">
+        </Button> 
+    </GridLayout> 
+</StackLayout> 

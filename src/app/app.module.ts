@@ -3,7 +3,8 @@ import { NativeScriptModule } from "nativescript-angular/nativescript.module";
 
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
-import { inicio } from "./InicioDeSesion/inicio.component";
+import { InicioModule } from "./InicioDeSesion/inicio.module";
+
 
 @NgModule({
     bootstrap: [
@@ -11,11 +12,10 @@ import { inicio } from "./InicioDeSesion/inicio.component";
     ],
     imports: [
         NativeScriptModule,
-        AppRoutingModule
+        AppRoutingModule  
     ],
     declarations: [
-        AppComponent,
-        inicio
+        AppComponent
     ],
     providers: [],
     schemas: [
