@@ -1,0 +1,19 @@
+.message{
+    color: #9D9D9D;
+    text-align: center;
+    font-size: 15px;
+    width: 85%;
+}
+
+Button {
+    border-radius: 15%;
+}
+
+.Facebook {
+    background-color: #454CFF;
+    color: #ffffff;
+}
+
+.Google {
+    color: #000000;
+}
