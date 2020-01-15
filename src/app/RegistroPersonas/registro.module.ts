@@ -7,6 +7,7 @@ import { RegistroRoutingModule } from "./registro.routing";
 import { FormsModule } from "@angular/forms";
 import { registroApp } from "./registro.component";
 import { PasoUno } from "./PasoUno/paso-uno.component";
+import { PasoDos } from "./PasoDos/paso-dos.component";
 
 @NgModule({
     imports: [
@@ -18,7 +19,8 @@ import { PasoUno } from "./PasoUno/paso-uno.component";
     ],
     declarations: [
         registroApp,
-        PasoUno 
+        PasoUno,
+        PasoDos
     ],
     providers: [],
     schemas: [
