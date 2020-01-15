@@ -28,3 +28,33 @@ Button.-primary {
     font-family: "fontawesome-webfont";
     margin: 5;
 }
+
+.roboto-black {
+    font-family: "Roboto-Black";
+    margin: 5;
+}
+
+.roboto-bold {
+    font-family: "Roboto-Bold";
+    margin: 5;
+}
+
+.roboto-light {
+    font-family: "Roboto-Light";
+    margin: 5;
+}
+
+.roboto-medium {
+    font-family: "Roboto-Medium";
+    margin: 5;
+}
+
+.roboto-regular {
+    font-family: "Roboto-Regular";
+    margin: 5;
+}
+
+.roboto-thin {
+    font-family: "Roboto-Thin";
+    margin: 5;
+}

@@ -5,14 +5,15 @@ import { registroApp } from "./registro.component";
 import { PasoUno } from "./PasoUno/paso-uno.component";
 
 export const routes: Routes = [
-    { path: '' , component:  registroApp, children: [
-        {   path: 'PasoUno' , component: PasoUno , outlet: 'pasoUno'}
-    ] }
-]
+    { path: '' , component: registroApp, children: [
+        { path: 'PasoUno' , component: PasoUno }
+    ]}
+  
+];
 
 @NgModule({
     imports: [NativeScriptRouterModule.forChild(routes)],
-    exports: [NativeScriptRouterModule]
+    exports: [NativeScriptRouterModule] 
 })
 
 export class RegistroRoutingModule {}

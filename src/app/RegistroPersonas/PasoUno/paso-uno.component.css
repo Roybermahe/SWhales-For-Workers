@@ -1,8 +1,29 @@
-.sub-tittle {
-    font-size: 18px;
-    color: #0094FF;
+* {
+    background: #F6F6F6;
+    font-family: Roboto;
 }
-
+GridLayout {
+    width: 100%;
+}
 .detail {
     color: #9D9D9D;
+    text-align: center;
+    width: 100%;
+}
+
+.input, .textview {
+    width: 90%;
+    border-color: whitesmoke;
+    background: #FFFFFF;
+    border-radius: 5;
+    border-width: 0.5;
+    border-radius: 5;
+    padding: 5;
+    height: 40;
+    font-style: normal;
+    placeholder-color: #9D9D9D;
+}
+
+.textview {
+    height: 110; 
 }

@@ -6,6 +6,7 @@ import { NativeScriptUIDataFormModule } from "nativescript-ui-dataform/angular";
 import { RegistroRoutingModule } from "./registro.routing";
 import { FormsModule } from "@angular/forms";
 import { registroApp } from "./registro.component";
+import { PasoUno } from "./PasoUno/paso-uno.component";
 
 @NgModule({
     imports: [
@@ -16,7 +17,8 @@ import { registroApp } from "./registro.component";
         NativeScriptUIDataFormModule
     ],
     declarations: [
-        registroApp
+        registroApp,
+        PasoUno 
     ],
     providers: [],
     schemas: [
