@@ -1,32 +1,32 @@
 <ActionBar>
   <Label text="Etapa de registro" class="h3 roboto-bold" ></Label>
 </ActionBar>
-<Tabs selectedIndex="0" tabsPosition="bottom">
-  <TabStrip>
-    <TabStripItem>
-      <Label text="Paso 1"></Label>
+<Tabs selectedIndex="{{steps}}" tabsPosition="bottom">
+  <TabStrip> 
+    <TabStripItem #pasouno title="PERFIL" class="roboto-bold">
+      <Image src="res://&#xf2be;" class="fa" ></Image>
+    </TabStripItem> 
+    <TabStripItem #pasodos title="HABILIDADES"  class="roboto-bold">
+      <Image src="res://&#xf2be;" class="fa" ></Image>
     </TabStripItem>
-    <TabStripItem>
-      <Label text="Paso 2"></Label>
+    <TabStripItem #pasotres title="REFERENCIAS"  class="roboto-bold">
+      <Image src="res://&#xf2be;" class="fa" ></Image>
     </TabStripItem>
-    <TabStripItem>
-      <Label text="Paso 3"></Label>
-    </TabStripItem>
-  </TabStrip>
-  <!-- The number of TabContentItem components should corespond to the number of TabStripItem components -->
+  </TabStrip>  
+  <!--The number of TabContentItem components should corespond to the number of TabStripItem components -->
   <TabContentItem>
-    <GridLayout>
+    <GridLayout> 
       <paso-uno></paso-uno>
     </GridLayout>
-  </TabContentItem>
+  </TabContentItem> 
   <TabContentItem>
-    <GridLayout>
+    <GridLayout> 
       <paso-dos></paso-dos>
     </GridLayout>
   </TabContentItem>
   <TabContentItem>
     <GridLayout>
-      <Label text="Search Page" class="h2 text-center"></Label>
+     <paso-tres></paso-tres>
     </GridLayout>
   </TabContentItem>
-</Tabs>
+</Tabs >

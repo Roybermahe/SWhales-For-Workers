@@ -19,6 +19,7 @@ GridLayout {
     border-width: 0.5;
     border-radius: 5;
     padding: 5;
+    margin-bottom: 7;
     height: 40;
     font-style: normal;
     placeholder-color: #9D9D9D;
@@ -27,3 +28,20 @@ GridLayout {
 .textview {
     height: 110; 
 }
+
+.input[required] , .textview[required] {
+    margin-bottom: 0;
+}
+
+Button {
+    width: 90%;
+    height: 40;
+    margin-top: 10;
+    background: #46BAF9;
+    color: white;
+    border-radius: 5;
+}
+
+.redfocus {
+    border-color: red;
+} 

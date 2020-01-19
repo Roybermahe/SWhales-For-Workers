@@ -1,0 +1,75 @@
+
+* {
+    background: #F6F6F6;
+    font-family: Roboto;
+}
+GridLayout {
+    width: 100%;
+}
+
+.Cantidad {
+    font-size: 15;
+    color:  dimgray;
+    text-align: center;
+    width: 100%;
+}
+
+.detail {
+    color: #9D9D9D;
+    text-align: center;
+    width: 100%;
+}
+
+.input, .textview {
+    width: 90%;
+    border-color: whitesmoke;
+    background: #FFFFFF;
+    border-radius: 5;
+    border-width: 0.5;
+    border-radius: 5;
+    padding: 5;
+    margin-bottom: 7;
+    height: 40;
+    font-style: normal;
+    placeholder-color: #9D9D9D;
+}
+
+.input[required] , .textview[required] {
+    margin-bottom: 0;
+}
+
+Button {
+    width: 90%;
+    height: 40;
+    margin-top: 10;
+    background: #46BAF9;
+    color: white;
+    border-radius: 5;
+}
+
+.redfocus {
+    border-color: red;
+} 
+
+.referencias {
+    background-color: white;
+    padding: 5;
+    border-radius: 7;
+    margin: auto;
+    margin-bottom: 4;
+} 
+
+.referencias .item {
+    background-color: white;
+}
+
+.fa {
+    font-family: "fontawesome-webfont";
+}
+
+.icon {
+    margin: 0;
+    color: #9D9D9D;
+    text-align: center;
+    font-size: 15;
+} 

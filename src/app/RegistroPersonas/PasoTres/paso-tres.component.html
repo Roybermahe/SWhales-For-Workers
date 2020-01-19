@@ -1,0 +1,29 @@
+<GridLayout rows="50,30,auto,auto" columns="*">
+
+    <Label row="0" col="0" colSpan="2" text="Agrega maximo 3 referencias, esto  nos ayudará a conocer mas sobre tu profesión"
+        class="detail h4 roboto-light" width="80%" textWrap="true"></Label>
+    <Label row="1" col="0" colSpan="2" class="Cantidad" text="{{listaDeReferencias.length}}/3" textWrap="true"></Label>
+   
+<StackLayout class="Stack-List" height="auto" row="2" col="0" colSpan="2" [visibility]="listaDeReferencias.length >= 0 ? 'visible' : 'collapsed'">
+        <StackLayout androidElevation="4" class="referencias" width="90%" height="70"  *ngFor="let item of listaDeReferencias;let i = index" (tap)="Eliminar(i)">
+            <GridLayout clas="item" width="auto" height="auto"  rows="auto,auto,auto" columns="*,40">
+                <Label row="0" col="0"  colSpan="2" text="{{item.Nombre + ' ' + item.Apellidos}}" backgroundColor="white" ></Label>
+                <label row="1" col="0" backgroundColor="white">
+                    <FormattedString>
+                        <Span text="Correo: " backgroundColor="white" color="#9D9D9D"></Span>
+                        <Span text="{{item.CorreoDeContacto.length != 0 ? item.CorreoDeContacto : 'No disponible'}}" backgroundColor="white"></Span>
+                    </FormattedString>
+                </label>
+                <Label row="2" col="0" backgroundColor="white">
+                    <FormattedString>
+                        <Span text="Tel: " backgroundColor="white" color="#9D9D9D"></Span> 
+                        <Span text="{{item.NumeroDeContacto}}" backgroundColor="white"></Span>
+                    </FormattedString>
+                </Label>
+                <Label row="1" col="1" rowSpan="2" text="&#xf00d;" class="fa icon" backgroundColor="white"></Label>
+             </GridLayout>
+        </StackLayout> 
+    </StackLayout> 
+    <Button row="3" col="0" [visibility]="listaDeReferencias.length < 3 ? 'visible' : 'collapsed'"
+        text="Añadir referencia" (tap)="viewModalReference()" ></Button>
+</GridLayout> 

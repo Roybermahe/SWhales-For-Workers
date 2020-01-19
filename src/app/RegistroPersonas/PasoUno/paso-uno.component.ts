@@ -1,4 +1,6 @@
 import { Component } from "@angular/core";
+import { RegistroService } from "~/services/registro.service";
+import { PrestadorDeServicio } from "~/models/PrestadorDeServicio.model";
 
 
 @Component({
@@ -8,5 +10,10 @@ import { Component } from "@angular/core";
 })
 
 export class PasoUno {
-    constructor() {}
+    Registro: PrestadorDeServicio = new PrestadorDeServicio();
+    constructor(private registroService: RegistroService) {}
+
+    GuardarPasoUno() {
+        this.registroService.PasoUnoEvent.emit(this.Registro);
+    }
 }

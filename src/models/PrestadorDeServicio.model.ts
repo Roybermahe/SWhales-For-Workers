@@ -7,15 +7,15 @@ import { Referencia } from "~/models/Referencia.model";
 })
 
 export class PrestadorDeServicio {
-    private ID_KEY:         number;
+    private ID_KEY?:         number;
     profesion:              string;
     DescripcionPerfil:      string;
     AniosDeExperiencia:     number;
     NumContacto:            number;
     ListaDeHabilidades?:    Habilidades[];
     ListaDeReferencias?:    Referencia[];
-    private EtapaActual:    number;
-    private FechaDeProceso: Date;
+    private EtapaActual?:    number;
+    private FechaDeProceso?: Date;
 
     constructor(){}
     

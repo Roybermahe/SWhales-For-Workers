@@ -1,7 +1,15 @@
-<GridLayout rows="30,46,auto,46,46" columns="*" width="100%">
-    <Label row="0" col="0" text="Brinda detalles sobre tu profesion" class="detail h4 roboto-light" textWrap = "true"></Label>
-    <TextField androidElevation="5" row="1" col="0" class="input roboto-light" hint="Profesion" required></TextField>
-    <TextView androidElevation="5" row="2" col="0"  class="textview roboto-light" hint="Describe tu perfil laboral" text="" editable="true"></TextView>
-    <TextField  androidElevation="5" row="3" col="0" class="input roboto-light" hint="Número de contacto" text="" keyboardType="number" ></TextField>
-    <TextField  androidElevation="5" row="4" col="0" class="input roboto-light" hint="Años de experiencia" text="" keyboardType="number" ></TextField>
-</GridLayout> 
+<GridLayout rows="30,auto,auto,auto,auto,auto" columns="*" width="100%">
+    <Label row="0" col="0" text="Brinda detalles sobre tu profesion" class="detail h4 fa roboto-light"
+        textWrap="true"></Label>
+    <TextField required #profesion="ngModel" maxLength="30" androidElevation="5" row="1" col="0" class="input roboto-light" hint="Profesion (max 30)"
+        [(ngModel)]="Registro.profesion" ></TextField>
+    <TextView required #descripcion="ngModel" maxLength="100" androidElevation="5" row="2" col="0" class="textview roboto-light"
+        hint="Describe tu perfil laboral (max 100)" text="" [(ngModel)]="Registro.DescripcionPerfil" editable="true" >
+    </TextView>
+    <TextField required #contacto="ngModel" maxLength="10" androidElevation="5" row="3" col="0" class="input roboto-light"
+        hint="Número de contacto" text="" [(ngModel)]="Registro.NumContacto" keyboardType="number" ></TextField>
+    <TextField required #experiencia="ngModel" maxLength="2" androidElevation="5" row="4" col="0" class="input roboto-light"
+        hint="Años de experiencia" text="" [(ngModel)]="Registro.AniosDeExperiencia" keyboardType="number" >
+    </TextField> 
+    <Button row="5" col="0" [visibility]= "profesion.valid && descripcion.valid && contacto.valid && experiencia.valid ? 'visible' : 'collapse'" text="Guardar" class="roboto-bold" (tap)="GuardarPasoUno()"></Button>
+</GridLayout>
