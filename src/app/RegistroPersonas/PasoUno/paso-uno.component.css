@@ -45,3 +45,14 @@ Button {
 .redfocus {
     border-color: red;
 } 
+
+.fa {
+    font-family: 'fontawesome-webfont';
+}
+
+.ImageUser {
+    object-fit: cover;
+    border-radius: 5; 
+    font-size: 200; 
+    color: #D9D9D9;
+}
