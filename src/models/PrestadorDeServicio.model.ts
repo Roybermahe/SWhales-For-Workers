@@ -1,13 +1,15 @@
 import { Injectable } from "@angular/core";
 import { Habilidades } from "~/models/Habilidades.model";
 import { Referencia } from "~/models/Referencia.model";
+import { ImageAsset } from "tns-core-modules";
 
 @Injectable({
     providedIn: 'root'
 })
 
 export class PrestadorDeServicio {
-    private ID_KEY?:         number;
+    private ID_KEY?:        number;
+    imagePerfil?:           ImageAsset;
     profesion:              string;
     DescripcionPerfil:      string;
     AniosDeExperiencia:     number;

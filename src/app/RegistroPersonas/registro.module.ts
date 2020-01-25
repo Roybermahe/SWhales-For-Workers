@@ -5,11 +5,14 @@ import { NativeScriptUIDataFormModule } from "nativescript-ui-dataform/angular";
 import { HttpClientModule } from "@angular/common/http";
 import { RegistroRoutingModule } from "./registro.routing";
 import { FormsModule } from "@angular/forms";
+import { TNSCheckBoxModule } from "@nstudio/nativescript-checkbox/angular";
+
 import { registroApp } from "./registro.component";
 import { PasoUno } from "./PasoUno/paso-uno.component";
 import { PasoDos } from "./PasoDos/paso-dos.component";
 import { PasoTres } from "./PasoTres/paso-tres.component";
-import { modalService } from "./PasoTres/modal-service.component";
+import { modalReferenceService } from "./PasoTres/modal-referenceservice.component";
+
 @NgModule({
     imports: [
         NativeScriptCommonModule,
@@ -17,14 +20,15 @@ import { modalService } from "./PasoTres/modal-service.component";
         NativeScriptFormsModule,
         FormsModule,
         NativeScriptUIDataFormModule,
-        HttpClientModule 
+        HttpClientModule,
+        TNSCheckBoxModule
     ],
     declarations: [
         registroApp,
         PasoUno,
         PasoDos,
         PasoTres,
-        modalService
+        modalReferenceService
     ],
     providers: [
     ],
@@ -32,7 +36,7 @@ import { modalService } from "./PasoTres/modal-service.component";
         NO_ERRORS_SCHEMA
     ],
     entryComponents: [ 
-        modalService
+        modalReferenceService
     ]
 })
 

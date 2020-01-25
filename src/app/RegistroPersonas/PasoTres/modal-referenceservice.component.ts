@@ -14,25 +14,25 @@ import { RegistroService } from "~/services/registro.service";
         <TextField androidElevation="4" #email hint="Correo (opcional)" keyboardType = "email" class="input"></TextField>
         <TextField androidElevation="4" required #numero hint="Telefono *" keyboardType = "number" maxLength="10" class="input"></TextField>
         <Button class="btn btn-outline" text="Agregar referencia" (tap)="close()"  style="margin-top:20;"></Button>
-    </StackLayout>`, 
+    </StackLayout>`,
     styleUrls: ['./paso-tres.component.css']
 })
 
-export class modalService {
-    @ViewChild('nombre', { static: true}) nombre: ElementRef;
-    @ViewChild('apellidos', { static: true}) apellidos: ElementRef;
-    @ViewChild('email', { static: true}) email: ElementRef;
-    @ViewChild('numero', { static: true}) numero: ElementRef;
-    constructor( private modalParams: ModalDialogParams, private registerService: RegistroService) {}
+export class modalReferenceService {
+    @ViewChild('nombre', { static: true }) nombre: ElementRef;
+    @ViewChild('apellidos', { static: true }) apellidos: ElementRef;
+    @ViewChild('email', { static: true }) email: ElementRef;
+    @ViewChild('numero', { static: true }) numero: ElementRef;
+    constructor(private modalParams: ModalDialogParams, private registerService: RegistroService) { }
 
     close() {
         const Referencia: Referencia = {
             Nombre: this.nombre.nativeElement.text.trim(),
             Apellidos: this.apellidos.nativeElement.text.trim(),
             NumeroDeContacto: <number>this.numero.nativeElement.text.trim(),
-            CorreoDeContacto: this.email.nativeElement.text.trim()  
+            CorreoDeContacto: this.email.nativeElement.text.trim()
         }
-        if(Referencia.Nombre.length > 0 && Referencia.Apellidos.length > 0 && Referencia.NumeroDeContacto > 0) {
+        if (Referencia.Nombre.length > 0 && Referencia.Apellidos.length > 0 && Referencia.NumeroDeContacto > 0) {
             this.registerService.PasoTresEvent.emit(Referencia);
         }
         this.modalParams.closeCallback();

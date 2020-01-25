@@ -1,0 +1,14 @@
+<GridLayout rows="30,*,auto" height="auto" width="100%" columns="*">
+    <Label row="0" col="0" colSpan="2" text="Elije hasta 5 habilidades adquiridas con tu profesión"
+        class="detail h4 roboto-light" width="87%" textWrap="true"></Label>
+    <ScrollView row="1" col="0" width="95%">
+        <StackLayout>
+            <StakcLayout *ngFor="let item of listaDeOpciones">
+                <CheckBox [id]="item.Id" [(ngModel)]="item.State" text="{{item.Text}}" fillColor="#46BAF9">
+                </CheckBox>
+            </StakcLayout>
+        </StackLayout>
+    </ScrollView>
+    <Button row="2" col="0" class="btn btn-outlet"
+        text="Guardar Habilidades" (tap)="GuardarLista()"></Button>
+</GridLayout>

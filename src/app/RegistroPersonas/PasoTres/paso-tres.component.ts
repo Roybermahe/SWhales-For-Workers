@@ -1,8 +1,8 @@
-import { Component, ViewContainerRef } from "@angular/core";
+import { Component, ViewContainerRef, OnInit } from "@angular/core";
 import { RegistroService } from "~/services/registro.service";
 import { Referencia } from "~/models/Referencia.model";
 import { ModalDialogService, ModalDialogOptions } from "nativescript-angular/common";
-import { modalService } from "./modal-service.component";
+import { modalReferenceService } from "./modal-referenceservice.component";
 
 
 @Component({
@@ -12,7 +12,7 @@ import { modalService } from "./modal-service.component";
     styleUrls: ['./paso-tres.component.css']
 })
 
-export class PasoTres { 
+export class PasoTres implements OnInit { 
     public listaDeReferencias: Referencia[] = [];
 
     constructor(
@@ -26,13 +26,21 @@ export class PasoTres {
             });
         }
 
+    ngOnInit() {
+        RegistroService.getRegistro()
+        .then((registroLoad) => {
+            registroLoad != null && registroLoad.ListaDeReferencias ?
+            this.listaDeReferencias = registroLoad.ListaDeReferencias: null;
+        }).catch(error => console.log('error' + error));
+    }
+
     viewModalReference() {
         const options: ModalDialogOptions = {
             viewContainerRef: this.viewContainerRef,
             fullscreen: false,
             context: {}
         };
-        this.modal_Services.showModal(modalService, options);
+        this.modal_Services.showModal(modalReferenceService, options);
     }
 
     async Eliminar(indice: number) {

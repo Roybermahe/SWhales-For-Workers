@@ -24,6 +24,6 @@
              </GridLayout>
         </StackLayout> 
     </StackLayout> 
-    <Button row="3" col="0" [visibility]="listaDeReferencias.length < 3 ? 'visible' : 'collapsed'"
+    <Button row="3" col="0" isEnabled="{{listaDeReferencias.length < 3 ? 'true' : 'false'}}"
         text="Añadir referencia" (tap)="viewModalReference()" ></Button>
 </GridLayout> 
