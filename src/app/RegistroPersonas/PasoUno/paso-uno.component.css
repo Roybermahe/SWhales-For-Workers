@@ -1,7 +1,8 @@
 * {
-    background: #F6F6F6;
-    font-family: Roboto;
+    background: white;
+    font-family: 'Cabin-Regular';
 }
+
 GridLayout {
     width: 100%;
 }
@@ -14,10 +15,8 @@ GridLayout {
 .input, .textview {
     width: 90%;
     border-color: whitesmoke;
-    background: #FFFFFF;
-    border-radius: 5;
-    border-width: 0.5;
-    border-radius: 5;
+    background: whitesmoke;
+    border-radius: 7;
     padding: 5;
     margin-bottom: 7;
     height: 40;

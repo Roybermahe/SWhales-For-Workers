@@ -12,6 +12,8 @@ import { PasoUno } from "./PasoUno/paso-uno.component";
 import { PasoDos } from "./PasoDos/paso-dos.component";
 import { PasoTres } from "./PasoTres/paso-tres.component";
 import { modalReferenceService } from "./PasoTres/modal-referenceservice.component";
+import { finRegistro } from "./fin-registro.component";
+import { inicioRegistro } from "./inicio-registro.component";
 
 @NgModule({
     imports: [
@@ -28,6 +30,8 @@ import { modalReferenceService } from "./PasoTres/modal-referenceservice.compone
         PasoUno,
         PasoDos,
         PasoTres,
+        finRegistro,
+        inicioRegistro,
         modalReferenceService
     ],
     providers: [

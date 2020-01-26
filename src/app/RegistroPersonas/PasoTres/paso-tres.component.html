@@ -5,25 +5,25 @@
     <Label row="1" col="0" colSpan="2" class="Cantidad" text="{{listaDeReferencias.length}}/3" textWrap="true"></Label>
    
 <StackLayout class="Stack-List" height="auto" row="2" col="0" colSpan="2" [visibility]="listaDeReferencias.length >= 0 ? 'visible' : 'collapsed'">
-        <StackLayout androidElevation="4" class="referencias" width="90%" height="70"  *ngFor="let item of listaDeReferencias;let i = index" (tap)="Eliminar(i)">
+        <StackLayout androidElevation="0" class="referencias" width="90%" height="70"  *ngFor="let item of listaDeReferencias;let i = index" (tap)="Eliminar(i)">
             <GridLayout clas="item" width="auto" height="auto"  rows="auto,auto,auto" columns="*,40">
-                <Label row="0" col="0"  colSpan="2" text="{{item.Nombre + ' ' + item.Apellidos}}" backgroundColor="white" ></Label>
-                <label row="1" col="0" backgroundColor="white">
+                <Label row="0" col="0"  colSpan="2" text="{{item.Nombre + ' ' + item.Apellidos}}" backgroundColor="whitesmoke" ></Label>
+                <label row="1" col="0" backgroundColor="whitesmoke">
                     <FormattedString>
-                        <Span text="Correo: " backgroundColor="white" color="#9D9D9D"></Span>
-                        <Span text="{{item.CorreoDeContacto.length != 0 ? item.CorreoDeContacto : 'No disponible'}}" backgroundColor="white"></Span>
+                        <Span text="Correo: " backgroundColor="whitesmoke" color="#9D9D9D"></Span>
+                        <Span text="{{item.CorreoDeContacto.length != 0 ? item.CorreoDeContacto : 'No disponible'}}" backgroundColor="whitesmoke"></Span>
                     </FormattedString>
                 </label>
-                <Label row="2" col="0" backgroundColor="white">
+                <Label row="2" col="0" backgroundColor="whitesmoke">
                     <FormattedString>
-                        <Span text="Tel: " backgroundColor="white" color="#9D9D9D"></Span> 
-                        <Span text="{{item.NumeroDeContacto}}" backgroundColor="white"></Span>
+                        <Span text="Tel: " backgroundColor="whitesmoke" color="#9D9D9D"></Span> 
+                        <Span text="{{item.NumeroDeContacto}}" backgroundColor="whitesmoke"></Span>
                     </FormattedString>
                 </Label>
-                <Label row="1" col="1" rowSpan="2" text="&#xf00d;" class="fa icon" backgroundColor="white"></Label>
+                <Label row="1" col="1" rowSpan="2" text="&#xf00d;" class="fa icon" backgroundColor="whitesmoke"></Label>
              </GridLayout>
         </StackLayout> 
     </StackLayout> 
     <Button row="3" col="0" isEnabled="{{listaDeReferencias.length < 3 ? 'true' : 'false'}}"
-        text="Añadir referencia" (tap)="viewModalReference()" ></Button>
+        text="Añadir referencia" (tap)="viewModalReference()" androidElevation="0"></Button>
 </GridLayout> 

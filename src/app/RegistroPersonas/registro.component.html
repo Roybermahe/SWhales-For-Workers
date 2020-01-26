@@ -1,20 +1,30 @@
 <ActionBar>
-  <Label text="Etapa de registro" class="h3 roboto-bold"></Label>
 </ActionBar>
 
 <Tabs selectedIndex="{{steps}}" tabsPosition="bottom">
   <TabStrip>
-    <TabStripItem #pasouno title="PERFIL" class="roboto-bold">
+    <TabStripItem #pasouno title="Registro" class="Cabin-bold">
       <Image src="res://&#xf2be;" class="fa"></Image>
     </TabStripItem>
-    <TabStripItem #pasodos title="HABILIDADES" class="roboto-bold">
+    <TabStripItem #pasouno title="Perfil" class="Cabin-bold">
       <Image src="res://&#xf2be;" class="fa"></Image>
     </TabStripItem>
-    <TabStripItem #pasotres title="REFERENCIAS" class="roboto-bold">
+    <TabStripItem #pasodos title="Habilidades" class="Cabin-bold">
+      <Image src="res://&#xf2be;" class="fa"></Image>
+    </TabStripItem>
+    <TabStripItem #pasotres title="Referencias" class="Cabin-bold">
+      <Image src="res://&#xf2be;" class="fa"></Image>
+    </TabStripItem>
+    <TabStripItem #pasotres title="Finalizar" class="Cabin-bold">
       <Image src="res://&#xf2be;" class="fa"></Image>
     </TabStripItem>
   </TabStrip>
 
+  <TabContentItem>
+    <GridLayout>
+      <inicio-registro></inicio-registro>
+    </GridLayout>
+  </TabContentItem>
   <TabContentItem>
     <GridLayout>
       <paso-uno></paso-uno>
@@ -28,6 +38,11 @@
   <TabContentItem>
     <GridLayout>
       <paso-tres></paso-tres>
+    </GridLayout>
+  </TabContentItem>
+  <TabContentItem>
+    <GridLayout>
+      <fin-registro></fin-registro>
     </GridLayout>
   </TabContentItem>
 </Tabs>

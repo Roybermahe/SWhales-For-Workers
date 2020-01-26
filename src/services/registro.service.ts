@@ -41,4 +41,8 @@ export class RegistroService {
     public static async sendToRest() {
         
     }
+
+    public static getTerminosCondiciones(): string {
+        return '';
+    }
 }

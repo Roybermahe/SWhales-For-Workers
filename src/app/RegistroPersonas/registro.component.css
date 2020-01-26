@@ -1,12 +1,64 @@
-ActionBar {
-    background: #46BAF9;
+* {
+    font-family: 'Cabin-Bold';
 }
 
-ActionBar Label {
-    color: white;
+ActionBar {
+    background: #46BAF9;
+    height: 25;
 }
 
 TabStrip {
     background-color: white;
-    color: black;
+    height: auto;
+}
+
+.TyC{
+    background: whitesmoke;
+    text-align: justify;
+    border-radius: 5;
+    border-color: whitesmoke;
+}
+.fa {
+    font-family: 'fontawesome-webfont';
+}
+
+.icon {
+    font-size: 25;
+    color: #46BAF9;
+    background-color: white;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.input{
+    background: white;
+    border-radius: 5;
+    margin-top: 25;
+    height: 40;
+}
+.detail {
+    background: white;
+    vertical-align: middle;
+    padding-left: 5;
+    color: dimgray;
+}
+
+.title {
+    margin-top: 10;
+    text-align: center;
+}
+
+.description {
+    font-family: 'Cabin-Regular';
+    color: dimgray;
+    text-align: justify;
+}
+
+Button {
+    width: 90%;
+    height: 40;
+    margin-top: 10;
+    background: #46BAF9;
+    color: white;
+    border-radius: 5;
 }

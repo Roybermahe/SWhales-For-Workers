@@ -29,32 +29,24 @@ Button.-primary {
     margin: 5;
 }
 
-.roboto-black {
-    font-family: "Roboto-Black";
+
+.Cabin-bold {
+    font-family: "Cabin-Bold";
     margin: 5;
 }
 
-.roboto-bold {
-    font-family: "Roboto-Bold";
+
+.Cabin-medium {
+    font-family: "Cabin-Medium";
     margin: 5;
 }
 
-.roboto-light {
-    font-family: "Roboto-Light";
+.Cabin-regular {
+    font-family: "Cabin-Regular";
     margin: 5;
 }
 
-.roboto-medium {
-    font-family: "Roboto-Medium";
-    margin: 5;
-}
-
-.roboto-regular {
-    font-family: "Roboto-Regular";
-    margin: 5;
-}
-
-.roboto-thin {
-    font-family: "Roboto-Thin";
+.Cabin-semiBold {
+    font-family: "Cabin-SemiBold";
     margin: 5;
 }

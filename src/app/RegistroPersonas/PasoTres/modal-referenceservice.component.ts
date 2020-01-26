@@ -9,11 +9,11 @@ import { RegistroService } from "~/services/registro.service";
     template: `
     <StackLayout style="margin-top:10; margin-bottom:10;">
         <Label class="detail text-center" text="Nueva referencia" textWrap="true"></Label>
-        <TextField androidElevation="4" required #nombre hint="Nombres *" maxLength="20" class="input"></TextField>
-        <TextField androidElevation="4" required #apellidos hint="Apellidos *" maxLength="30" class="input"></TextField>
-        <TextField androidElevation="4" #email hint="Correo (opcional)" keyboardType = "email" class="input"></TextField>
-        <TextField androidElevation="4" required #numero hint="Telefono *" keyboardType = "number" maxLength="10" class="input"></TextField>
-        <Button class="btn btn-outline" text="Agregar referencia" (tap)="close()"  style="margin-top:20;"></Button>
+        <TextField androidElevation="0" required #nombre hint="Nombres *" maxLength="20" class="input"></TextField>
+        <TextField androidElevation="0" required #apellidos hint="Apellidos *" maxLength="30" class="input"></TextField>
+        <TextField androidElevation="0" #email hint="Correo (opcional)" keyboardType = "email" class="input"></TextField>
+        <TextField androidElevation="0" required #numero hint="Telefono *" keyboardType = "number" maxLength="10" class="input"></TextField>
+        <Button class="btn btn-outline" text="Agregar referencia" (tap)="close()"  style="margin-top:20;"  androidElevation="0"></Button>
     </StackLayout>`,
     styleUrls: ['./paso-tres.component.css']
 })

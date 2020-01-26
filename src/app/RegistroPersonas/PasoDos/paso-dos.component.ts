@@ -43,7 +43,9 @@ export class PasoDos implements OnInit {
                 });
                 this.registroService.ListaHabilidades.emit(this.ListaDeHabilidades);
             }
-            else { alert({title: 'Habilidades', message: 'No se admiten mas de 5 habilidades', okButtonText: 'Continuar'}) ;}
+            else { 
+                alert({title: 'Habilidades', message: 'No se admiten '+ cantidad +' habilidades', okButtonText: 'Continuar'}) ;
+            }
         } catch(error) {
             console.log('error -->' + error);
         }

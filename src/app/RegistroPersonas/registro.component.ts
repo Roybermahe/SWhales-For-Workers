@@ -3,6 +3,8 @@ import { PrestadorDeServicio } from "~/models/PrestadorDeServicio.model";
 import { RegistroService } from "~/services/registro.service";
 import { Habilidades } from "~/models/Habilidades.model";
 import { Referencia } from "~/models/Referencia.model";
+import { Page } from "tns-core-modules";
+
 
 @Component({
     selector: 'registro-app',
@@ -16,7 +18,8 @@ export class registroApp implements OnInit{
     @ViewChild('pasotres', null) pasoTresChild: ElementRef;
     public Registro: PrestadorDeServicio = new PrestadorDeServicio();
      
-    constructor (private registroService: RegistroService) {
+    constructor (private registroService: RegistroService, private page : Page) 
+    {
         this.registroService.PasoUnoEvent
             .subscribe( (Prestador: PrestadorDeServicio) => {
                 this.Registro = Prestador;
@@ -29,7 +32,6 @@ export class registroApp implements OnInit{
             });
         this.registroService.ListaHabilidades
             .subscribe( (ListaHabilidades: Habilidades[]) => { 
-                console.log(JSON.stringify(ListaHabilidades));
                 this.Registro.ListaDeHabilidades = ListaHabilidades;
                 this.SaveRegistro();
                 alert({
@@ -48,7 +50,6 @@ export class registroApp implements OnInit{
         const registroLoad = await RegistroService.getRegistro();
         registroLoad  ?
         this.Registro = registroLoad: null;
-
     }
 
     SaveRegistro(){
